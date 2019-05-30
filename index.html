@@ -1,0 +1,241 @@
+<!DOCTYPE.html>
+<html>
+    <head>
+        <title>Calcule Your Average!</title>
+        <style>
+            body{
+                background-color: #BDEEEE;
+            }
+            #header{
+                padding: 60px;
+                text-align: center;
+                background: #F1E781;
+                color: black;
+                font-size: 50px;
+                font-family:Lucida Console;
+                text-align: center;
+            }
+            #h2{
+                padding: 1px;
+                background: #F1E781;
+                color: black;
+                font-size: 27px;
+                font-family:Lucida Console;
+                text-align: left;
+            }
+            #wpage{
+                border-style: inset;
+            }
+            #chart{
+                font-family:Lucida Console;
+                padding: 35px;
+                text-align: center;
+                border-style: inset;
+                height: 500px;
+                width: 500px;
+                font-size: 29px;
+            }
+            input{
+                height: 45px;
+                width: 200px;
+                text-align: center;
+                font-family:Lucida Console;
+                font-size: 20px;
+                background: #EAF9F7;
+                margin-left: 10px;
+            }
+            #button{
+                width: 230px;
+                height: 40px;
+                text-align: center;
+                background: #BACFE0;
+                font: Verdana;
+                font-size: 20px;
+            }
+            #disclaimer{
+                font-size: 20px;
+                padding: 15px;
+                background: white;
+
+            }
+            #result, #x{
+                 font-size: 30px;
+                 font-style:oblique;
+                 text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div id="h2">Griffin, Kaidin, and Eric' Computer Science Final Project!</div>
+            <b> Calculate Your Average!!! </b>
+        </div>
+        <h1 style=" color: #669999" ></h1>
+        <table id="wpage">
+            <tr>
+                <td>
+                    <div id= "Average">
+                        <table id="chart">
+                            <form onsubmit="calculate(); return false">
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Weight of Class</br>(out of 1.1)</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class1" type="text" placeholder = "Grade in Class 1" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight1" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class2" type="text" placeholder = "Grade in Class 2" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight2" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                               <tr>
+                                    <td>
+                                        <input id = "class3" type="text" placeholder = "Grade in Class 3" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight3" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class4" type="text" placeholder = "Grade in Class 4" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight4" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class5" type="text" placeholder = "Grade in Class 5" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight5" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class6" type="text" placeholder = "Grade in Class 6" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight6" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id = "class7" type="text" placeholder = "Grade in Class 7" autocomplete= "off">
+                                    </td>
+                                    <td>
+                                        <input id= "weight7" type="text" placeholder = "Class Weight" autocomplete= "on">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input id="button" type="submit" value = "Calculate!!"/>
+                                    </td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
+                </td>
+                <td id="Averagee">
+                    <div id="result"> </div>
+                    <div id="x" ></div>
+                </td>
+             </tr>
+        </table>
+        </br>
+        <img src="Chart.jpg" style="width:450px; display: block; border: 2px solid black; height: 500px" >
+        </br>
+        <div id="disclaimer">
+            *Please note that all averages are rounded to the nearest percent!!*
+        </div>
+
+        <script>
+            function calculate()
+            {
+              let one = document.querySelector("#class1").value;
+              let two = document.querySelector("#class2").value;
+              let three = document.querySelector("#class3").value;
+              let four = document.querySelector("#class4").value;
+              let five = document.querySelector("#class5").value;
+              let six = document.querySelector("#class6").value;
+              let seven = document.querySelector("#class7").value;
+
+              let wone = document.querySelector("#weight1").value;
+              let wtwo = document.querySelector("#weight2").value;
+              let wthree = document.querySelector("#weight3").value;
+              let wfour = document.querySelector("#weight4").value;
+              let wfive = document.querySelector("#weight5").value;
+              let wsix = document.querySelector("#weight6").value;
+              let wseven = document.querySelector("#weight7").value;
+
+              let resultp1 = (one * wone) + (two * wtwo) + (three * wthree)  + (four * wfour) + (five * wfive) + (six * wsix) + (seven * wseven);
+              let resultp2 = Math.floor((resultp1 / 7));
+
+              document.querySelector("#result").innerHTML = "Your weighted average for this marking period will be " + resultp2 +"%";
+
+              if (resultp2 >= 97)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of an A+!! :)";
+              }
+              if (resultp2 >= 95 && resultp2 < 97)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of an A!! :)";
+              }
+              if (resultp2 >= 92 && resultp2 < 95)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of an A-!! :)";
+              }
+              if (resultp2 >= 87 && resultp2 < 92)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a B+! :>";
+              }
+              if (resultp2 >= 85 && resultp2 < 87)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a B! :]";
+              }
+              if (resultp2 >= 82 && resultp2 < 85)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a B-! :}";
+              };
+              if (resultp2 >= 77 && resultp2 < 82)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a C+...";
+              }
+              if (resultp2 >= 75 && resultp2 < 77)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a C...";
+              }
+              if (resultp2 >= 72 && resultp2 < 75)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a C-...";
+              }
+              if (resultp2 >= 64 && resultp2 < 72)
+              {
+                  document.querySelector("#x").innerHTML = "This  equates to a letter grade of a D+ :/";
+              }
+              if (resultp2 < 64)
+              {
+                  document.querySelector("#x").innerHTML = "You did not pass :( - F.";
+              }
+              return false;
+
+
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
